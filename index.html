@@ -912,7 +912,7 @@ function getLocation(){
       document.getElementById('searchInput').value = name;
       fetchWeather(lat, lon, name, country);
     } catch {
-      fetchWeather(lat, lon, 'Your Location', '');
+      fetchWeather(`lat, lon, '${lat} ${lon}', ''`);
     }
   }, () => {
     hideEl('loading');
